@@ -47,7 +47,7 @@ export default function OrderTrackingPage() {
 
         fetchOrder();
 
-        const socket = io('http://localhost:3001');
+        const socket = io('https://order-management-3mzf.vercel.app/');
         socket.emit('join-order', id);
 
         socket.on('status-update', (data) => {
