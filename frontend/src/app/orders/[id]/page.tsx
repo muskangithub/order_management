@@ -56,7 +56,9 @@ export default function OrderTrackingPage() {
             }
         });
 
-        return () => socket.disconnect();
+        return () => {
+            socket.disconnect();
+        };
     }, [id, dispatch]);
 
     if (loading)
@@ -158,7 +160,7 @@ export default function OrderTrackingPage() {
                             </h3>
 
                             <div className="space-y-3">
-                                {currentOrder?.orderItems.map((item: any) => (
+                                {currentOrder?.orderItems?.map((item: any) => (
                                     <div
                                         key={item.id}
                                         className="flex justify-between items-center bg-green-50 p-3 rounded-md"

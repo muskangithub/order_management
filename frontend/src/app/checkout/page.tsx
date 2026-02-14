@@ -43,7 +43,7 @@ export default function CheckoutPage() {
                     phone: formData.phone,
                     address: formData.address,
                 },
-                items: items.map(item => ({
+                items: items.map((item) => ({
                     menuItemId: item.id,
                     quantity: item.quantity,
                 })),
