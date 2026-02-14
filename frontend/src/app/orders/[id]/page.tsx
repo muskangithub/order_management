@@ -47,7 +47,7 @@ export default function OrderTrackingPage() {
 
         fetchOrder();
 
-        const socket = io('https://order-management-3mzf.vercel.app/');
+        const socket = io('https://order-management-ten-taupe.vercel.app/');
         socket.emit('join-order', id);
 
         socket.on('status-update', (data) => {

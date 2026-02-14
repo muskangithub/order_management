@@ -10,6 +10,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:3000',
+            'https://order-management-ten-taupe.vercel.app',
             'https://order-management-3mzf.vercel.app',
         ],
         credentials: true,
