@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import api from '@/lib/api';
@@ -14,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { setCurrentOrder, setLoading, setError } from '@/lib/redux/orderSlice';
 import { toast } from 'sonner';
 import { Separator } from '@/components/ui/separator';
+import { useForm } from 'react-hook-form';
 
 const checkoutSchema = z.object({
     name: z.string().min(2, 'Name is required'),
